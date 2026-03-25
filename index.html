@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Parallax Scrolling Website | Vanilla JavaScript</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./src/imgs/stars.png" id="stars" />
+        <img src="./src/imgs/moon.png" id="moon" />
+        <img src="./src/imgs/mountain-behind.png" id="mountain-behind" />
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="./src/imgs/mountain-front.png" id="mountain-front" />
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia odio repellendus similique enim impedit nisi
+            voluptas rerum ducimus consequuntur temporibus eligendi consequatur veniam iusto maxime officia,
+            necessitatibus inventore adipisci commodi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam dolor aliquam quas quis doloribus non, itaque fuga, ea nesciunt cumque commodi voluptatem
+            accusantium sunt rerum quae odio molestias eum iste? Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Rerum quae commodi deleniti, officia ullam earum velit quasi assumenda vero, quas quo voluptates
+            aspernatur esse, eos delectus temporibus iure debitis eius? <br /> <br />Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Quia odio repellendus similique enim impedit nisi
+            voluptas rerum ducimus consequuntur temporibus eligendi consequatur veniam iusto maxime officia,
+            necessitatibus inventore adipisci commodi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam dolor aliquam quas quis doloribus non, itaque fuga, ea nesciunt cumque commodi voluptatem
+            accusantium sunt rerum quae odio molestias eum iste? Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Rerum quae commodi deleniti, officia ullam earum velit quasi assumenda vero, quas quo voluptates
+            aspernatur esse, eos delectus temporibus iure debitis eius?<br /> <br />Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Quia odio repellendus similique enim impedit nisi
+            voluptas rerum ducimus consequuntur temporibus eligendi consequatur veniam iusto maxime officia,
+            necessitatibus inventore adipisci commodi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam dolor aliquam quas quis doloribus non, itaque fuga, ea nesciunt cumque commodi voluptatem
+            accusantium sunt rerum quae odio molestias eum iste? Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Rerum quae commodi deleniti, officia ullam earum velit quasi assumenda vero, quas quo voluptates
+            aspernatur esse, eos delectus temporibus iure debitis eius?<br /> <br />Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Quia odio repellendus similique enim impedit nisi
+            voluptas rerum ducimus consequuntur temporibus eligendi consequatur veniam iusto maxime officia,
+            necessitatibus inventore adipisci commodi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam dolor aliquam quas quis doloribus non, itaque fuga, ea nesciunt cumque commodi voluptatem
+            accusantium sunt rerum quae odio molestias eum iste? Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Rerum quae commodi deleniti, officia ullam earum velit quasi assumenda vero, quas quo voluptates
+            aspernatur esse, eos delectus temporibus iure debitis eius?<br /> <br />Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Quia odio repellendus similique enim impedit nisi
+            voluptas rerum ducimus consequuntur temporibus eligendi consequatur veniam iusto maxime officia,
+            necessitatibus inventore adipisci commodi. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam dolor aliquam quas quis doloribus non, itaque fuga, ea nesciunt cumque commodi voluptatem
+            accusantium sunt rerum quae odio molestias eum iste? Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Rerum quae commodi deleniti, officia ullam earum velit quasi assumenda vero, quas quo voluptates
+            aspernatur esse, eos delectus temporibus iure debitis eius?</p>
+        </p>
+    </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountainBehind = document.getElementById('mountain-behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountainFront = document.getElementById('mountain-front');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountainBehind.style.top = value * 0.05 + 'px';
+            mountainFront.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+</body>
+
+</html>
