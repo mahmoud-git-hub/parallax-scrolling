@@ -71,11 +71,11 @@
 
 @layer components {
     section img#moon {
-        @apply z-2;
+        @apply mix-blend-screen z-4;
     }
 
     section img#mountain-front {
-        @apply z-1;
+        @apply z-3;
     }
 
     #text {
